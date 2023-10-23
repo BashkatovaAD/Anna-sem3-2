@@ -1,0 +1,15 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Работа для приветствия
+    steps:
+      - name: Шаг действия Привет, мир
+        id: hello
+        uses: actions/hello-world-docker-action@v2
+        with:
+          who-to-greet: 'Mona the Octocat'
+      - name: Получение времени вывода
+        run: echo "Время было ${{ steps.hello.outputs.time }}"
+
