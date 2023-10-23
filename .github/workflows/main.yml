@@ -9,7 +9,7 @@ jobs:
         id: hello
         uses: actions/hello-world-docker-action@v2
         with:
-          who-to-greet: 'Mona the Octocat'
+          who-to-greet: 'anna bashkatova'
       - name: Получение времени вывода
         run: echo "Время было ${{ steps.hello.outputs.time }}"
 
